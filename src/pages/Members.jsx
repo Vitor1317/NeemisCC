@@ -31,7 +31,6 @@ export function Members() {
 
 	function handleSwapAvatar() {
 		setSlider((state) => {
-			console.log(state);
 			if (state === avatars.length - 1) {
 				return 0;
 			}
@@ -41,7 +40,7 @@ export function Members() {
 	}
 
 	return (
-		<section className="c-space my-20">
+		<section id="members" className="c-space my-20">
 			<div className="w-full text-white-600">
 				<h3 className="head-text">Membros</h3>
 
@@ -79,8 +78,8 @@ export function Members() {
 									</div>
 
 									<div className="sm:p-5 px-2.5 py-5">
-										<p className="font-bold text-white-800">{item.name}</p>
-										<p className="text-sm mb-5">
+										<p className="font-bold text-amber-400">{item.name}</p>
+										<p className="text-amber-100 text-sm mb-5">
 											{item.pos} -- {item.duration}
 										</p>
 										<p className="group-hover:text-white transition-all ease-in-out duration-500">

@@ -7,23 +7,9 @@ export function Footer() {
 				<p className="hover:cursor-pointer">Política de privacidade</p>
 			</div>
 			<div className="flex gap-3">
-				<div className="social-icon">
+				<a href="https://github.com/NeemisCC" className="social-icon">
 					<img className="w-1/2 h-1/2" src="/assets/github.svg" alt="github" />
-				</div>
-				<div className="social-icon">
-					<img
-						className="w-1/2 h-1/2"
-						src="/assets/twitter.svg"
-						alt="twitter"
-					/>
-				</div>
-				<div className="social-icon">
-					<img
-						className="w-1/2 h-1/2"
-						src="/assets/instagram.svg"
-						alt="instagram"
-					/>
-				</div>
+				</a>
 			</div>
 			<p className="text-yellow-700 hover:cursor-pointer">
 				©2024 NeemisCC. Todos os direitos reservados.

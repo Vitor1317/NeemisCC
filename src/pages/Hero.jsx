@@ -18,11 +18,10 @@ export function Hero() {
 	const sizes = calculateSizes(isSmall, isMobile, isTable);
 
 	return (
-		<section className="min-h-screen w-full flex flex-col relative">
+		<section id="home" className="min-h-screen w-full flex flex-col relative">
 			<div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
 				<p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-					Olá, nós somos o grupo do Neemias{" "}
-					<span className="waving-hand">🖐️</span>
+					Olá, nós somos o grupo Amarelo <span className="waving-hand">🖐️</span>
 				</p>
 				<p className="hero_tag text-gray_gradient">
 					Paradigma Orientado a Objetos
@@ -40,10 +39,12 @@ export function Hero() {
 							/>
 						</HeroCamera>
 
-						<group>
-							<JavaLogo scale={1.25} position={[-20, -5, 0]} />
-							<ReactLogo scale={1} position={[20, -5, 0]} />
-						</group>
+						{(!isMobile || !isSmall) && (
+							<group>
+								<JavaLogo scale={1.25} position={[-20, -5, 0]} />
+								<ReactLogo scale={1} position={[20, -5, 0]} />
+							</group>
+						)}
 						<ambientLight intensity={1} />
 						<directionalLight position={[10, 10, 10]} intensity={0.5} />
 					</Suspense>
@@ -51,7 +52,7 @@ export function Hero() {
 			</div>
 
 			<div className="absolute -bottom-28 left-0 right-0 w-full z-10 c-space">
-				<a href="" className="w-fit ">
+				<a id="content" href="" className="w-fit ">
 					<Button
 						name="Conheça o conteúdo👌"
 						isBeam={true}

@@ -5,28 +5,28 @@ export const navLinks = [
 		href: "#home",
 	},
 	{
-		id: 2,
-		name: "Membros",
+		id: 3,
+		name: "Sobre",
 		href: "#about",
 	},
 	{
-		id: 3,
-		name: "Conteúdo",
-		href: "#work",
+		id: 2,
+		name: "Membros",
+		href: "#members",
 	},
 	{
 		id: 4,
-		name: "Referências",
-		href: "#contact",
+		name: "Conteúdo",
+		href: "#content",
 	},
 ];
 
 export const myProjects = [
 	{
 		title: "Paradigma orientado a objetos - POO",
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aspernatur veniam ex possimus culpa animi sequi nam rem, adipisci libero consequuntur unde aliquam in quia ullam commodi molestias corporis eveniet dolorum?",
+		desc: "O paradigma orientado a objetos (POO) surgiu na década de 1960, com os primeiros conceitos sendo explorados na linguagem Simula, desenvolvida por Ole-Johan Dahl e Kristen Nygaard. Na década de 1970, a linguagem Smalltalk, criada por Alan Kay e sua equipe, popularizou a POO, introduzindo conceitos fundamentais como encapsulamento e herança. Nos anos 80 e 90, a POO ganhou impulso com linguagens como C++ e Java, que integraram esses conceitos em ambientes de programação amplamente utilizados.",
 		subdesc:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit temporibus officiis provident tenetur, omnis illum hic recusandae molestias? Ipsum minima tempora voluptate quam reprehenderit tempore nihil libero.",
+			"Com o crescimento da complexidade dos sistemas, a POO se tornou um modelo dominante, influenciando o desenvolvimento de software e promovendo uma abordagem mais modular e reutilizável. Hoje, é um dos paradigmas mais adotados em diversas linguagens de programação.",
 		href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
 		texture: "/textures/project/project2.mp4",
 		logo: "/assets/paradigma.png",
@@ -54,16 +54,16 @@ export const myProjects = [
 			},
 			{
 				id: 4,
-				name: "Framer Motion",
+				name: "Java",
 				path: "/assets/javaico.png",
 			},
 		],
 	},
 	{
 		title: "Java lang - java",
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aspernatur veniam ex possimus culpa animi sequi nam rem, adipisci libero consequuntur unde aliquam in quia ullam commodi molestias corporis eveniet dolorum?",
+		desc: "Java foi criado por James Gosling e sua equipe na Sun Microsystems, com o primeiro lançamento em 1995. O objetivo era desenvolver uma linguagem de programação que fosse independente de plataforma, permitindo que os programas fossem executados em diferentes dispositivos sem necessidade de recompilação.",
 		subdesc:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit temporibus officiis provident tenetur, omnis illum hic recusandae molestias? Ipsum minima tempora voluptate quam reprehenderit tempore nihil libero.",
+			"Java ganhou popularidade rapidamente, especialmente com o crescimento da internet.",
 		href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
 		texture: "/textures/project/project1.mp4",
 		logo: "/assets/javalogo.png",
@@ -91,7 +91,7 @@ export const myProjects = [
 			},
 			{
 				id: 4,
-				name: "Framer Motion",
+				name: "Java",
 				path: "/assets/javaico.png",
 			},
 		],
@@ -213,7 +213,7 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
 	return {
-		deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.11,
+		deskScale: isSmall ? 0.07 : isMobile ? 0.07 : isTablet ? 0.1 : 0.11,
 		deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
 		cubePosition: isSmall
 			? [4, -5, 0]

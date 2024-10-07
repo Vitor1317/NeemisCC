@@ -23,7 +23,7 @@ export function About() {
 	}
 
 	return (
-		<section className="c-space my-20">
+		<section id="about" className="c-space my-20">
 			<p className="head-text mt-44">Sobre nosso trabalho</p>
 			<div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
 				<div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -48,11 +48,11 @@ export function About() {
 					</div>
 
 					<div className="flex flex-col gap-5 text-white-600 my-5">
-						<p className="text-yellow-500 text-2xl font-semibold animatedText">
+						<p className="text-amber-400 text-2xl font-semibold animatedText">
 							{currentProject.title}
 						</p>
-						<p className="animatedText text-yellow-50">{currentProject.desc}</p>
-						<p className="animatedText text-yellow-50">
+						<p className="animatedText text-white-100">{currentProject.desc}</p>
+						<p className="animatedText text-white-100">
 							{currentProject.subdesc}
 						</p>
 					</div>

@@ -26,14 +26,14 @@ export function Navbar() {
 				<div className="flex justify-between items-center py-5">
 					<a
 						href=""
-						className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
+						className="text-amber-300 font-bold text-xl hover:text-amber-600 transition-colors"
 					>
 						NeemisCC
 					</a>
 
 					<button
 						onClick={toggleMenu}
-						className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+						className="text-amber-400 hover:text-white focus:outline-none sm:hidden flex"
 					>
 						<img
 							src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}

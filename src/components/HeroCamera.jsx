@@ -18,5 +18,5 @@ export function HeroCamera({ children, isMobile }) {
 		}
 	});
 
-	if (!isMobile) return <group ref={groupRef}>{children}</group>;
+	return <group ref={groupRef}>{children}</group>;
 }
