@@ -16,17 +16,89 @@ export function Members() {
 	const [slider, setSlider] = useState(0);
 
 	const avatars = [
-		<Vitor key={1} animationName={animationName} position-y={-3} scale={3} />,
-		<Guilherme
-			key={2}
-			animationName={animationName}
-			position-y={-3}
-			scale={3}
-		/>,
-		<Neemias key={3} animationName={animationName} position-y={-3} scale={3} />,
-		<Ricardo key={4} animationName={animationName} position-y={-3} scale={3} />,
-		<Davi key={5} animationName={animationName} position-y={-3} scale={3} />,
-		<Pedro key={6} animationName={animationName} position-y={-3} scale={3} />,
+		{
+			avatar: (
+				<Vitor
+					key={1}
+					animationName={animationName}
+					position-y={-3}
+					scale={3}
+				/>
+			),
+			content0:
+				"Classes e objetos são fundamentais na POO, pois permitem a criação de código modular, reutilizável e sustentável, facilitando a manutenção e evolução dos sistemas",
+			content1:
+				"O ecossistema Java é robusto, com uma vasta biblioteca padrão, frameworks como Spring e Hibernate, e ferramentas como Maven e Gradle. Ele oferece um ambiente completo para desenvolvimento, execução e manutenção de aplicações escaláveis e seguras",
+			content2:
+				"A POO é aplicada no desenvolvimento de software para criar sistemas modulares e reutilizáveis. Facilita a manutenção, promove a reutilização de código e permite a criação de soluções complexas de forma organizada e eficiente, usando conceitos como herança e polimorfismo.",
+		},
+		{
+			avatar: (
+				<Guilherme
+					key={2}
+					animationName={animationName}
+					position-y={-3}
+					scale={3}
+				/>
+			),
+			content0:
+				"A Programação Orientada a Objetos (POO) surgiu na década de 1960 com a linguagem Simula 67, criada por Ole-Johan Dahl e Kristen Nygaard. Alan Kay popularizou o termo com a linguagem Smalltalk nos anos 1970",
+			content1: "Sem conteúdo sobre",
+			content2: "Sem conteúdo sobre",
+		},
+		{
+			avatar: (
+				<Neemias
+					key={3}
+					animationName={animationName}
+					position-y={-3}
+					scale={3}
+				/>
+			),
+			content0: "Sem conteúdo sobre",
+			content1:
+				"Java foi criado em 1991 por James Gosling e sua equipe na Sun Microsystems. Originalmente chamado de Oak, foi lançado como Java em 1995, revolucionando a programação com seu lema 'write once, run anywhere'.",
+			content2: "Sem conteúdo sobre",
+		},
+		{
+			avatar: (
+				<Ricardo
+					key={4}
+					animationName={animationName}
+					position-y={-3}
+					scale={3}
+				/>
+			),
+			content0:
+				"As características da POO incluem abstração, encapsulamento, herança e polimorfismo. Esses pilares permitem criar sistemas modulares, reutilizáveis e fáceis de manter, promovendo organização e eficiência no desenvolvimento de software",
+			content1: "Sem conteúdo sobre",
+			content2: "Sem conteúdo sobre",
+		},
+		{
+			avatar: (
+				<Davi key={5} animationName={animationName} position-y={-3} scale={3} />
+			),
+			content0:
+				"Os fundamentos da POO incluem abstração, encapsulamento, herança e polimorfismo. Esses conceitos permitem a criação de sistemas modulares, reutilizáveis e fáceis de manter, promovendo a organização e eficiência no desenvolvimento de software.",
+			content1:
+				"A sintaxe Java é rigorosa e baseada em C/C++. Utiliza chaves {} para blocos de código, ponto e vírgula ; para terminar instruções, e suporta orientação a objetos com classes, métodos e atributos, promovendo clareza e organização no código.",
+			content2:
+				"A POO é aplicada no desenvolvimento de software para criar sistemas modulares e reutilizáveis. Facilita a manutenção, promove a reutilização de código e permite a criação de soluções complexas de forma organizada e eficiente, usando conceitos como herança e polimorfismo.",
+		},
+		{
+			avatar: (
+				<Pedro
+					key={6}
+					animationName={animationName}
+					position-y={-3}
+					scale={3}
+				/>
+			),
+			content0:
+				"As principais linguagens orientadas a objetos incluem Java, C++, Python, C#, e Ruby. Essas linguagens são amplamente utilizadas devido à sua capacidade de criar sistemas modulares, reutilizáveis e fáceis de manter",
+			content1: "Sem conteúdo sobre",
+			content2: "Sem conteúdo sobre",
+		},
 	];
 
 	function handleSwapAvatar() {
@@ -55,13 +127,15 @@ export function Members() {
 							<directionalLight position={[10, 10, 10]} intensity={1} />
 							<OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
 
-							<Suspense fallback={<CanvasLoader />}>{avatars[slider]}</Suspense>
+							<Suspense fallback={<CanvasLoader />}>
+								{avatars[slider].avatar}
+							</Suspense>
 						</Canvas>
 					</div>
 
 					<div className="work-content">
 						<div className="sm:py-10 py-5 sm:px-5 px-2.5">
-							{workExperiences.map((item) => (
+							{workExperiences.map((item, index) => (
 								<div
 									onPointerOver={() =>
 										setAnimationName(item.animation.toLowerCase())
@@ -83,7 +157,7 @@ export function Members() {
 											{item.pos} -- {item.duration}
 										</p>
 										<p className="group-hover:text-white transition-all ease-in-out duration-500">
-											{item.title}
+											{avatars[slider]["content" + index]}
 										</p>
 									</div>
 								</div>

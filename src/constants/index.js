@@ -17,7 +17,7 @@ export const navLinks = [
 	{
 		id: 4,
 		name: "Conteúdo",
-		href: "#content",
+		href: "https://docs-poo.vercel.app/",
 	},
 ];
 

@@ -67,7 +67,7 @@ export function About() {
 
 						<a
 							className="flex items-center gap-2 cursor-pointer text-white-600"
-							href=""
+							href="https://docs-poo.vercel.app/"
 							target="_blank"
 							rel="noreferrer"
 						>
